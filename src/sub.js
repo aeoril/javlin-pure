@@ -3,11 +3,11 @@
 
 function sub(vec1, vec2) {
     'use strict';
-    var i, result = [];
-    for (i = 0; i < vec1.length; i++) {
-        result.push(vec1[i] - vec2[i]);
-    }
-    return result;
+    'use strict';
+    return vec1.reduce(function(acc, elem, index) {
+        acc.push(elem - vec2[index]);
+        return acc;
+    }, []);
 }
 
 module.exports = sub;

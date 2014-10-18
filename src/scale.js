@@ -3,11 +3,11 @@
 
 function scale(vec, scalar) {
     'use strict';
-    var i, result = [];
-    for (i = 0; i < vec.length; i++) {
-        result.push(vec[i] * scalar);
-    }
-    return result;
+    'use strict';
+    return vec.reduce(function(acc, elem, index) {
+        acc.push(elem * scalar);
+        return acc;
+    }, []);
 }
 
 module.exports = scale;
