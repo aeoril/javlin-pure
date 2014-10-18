@@ -1,13 +1,13 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
 
-function add(vec1, vec2) {
+function scale(vec, scalar) {
     'use strict';
-    var result = [];
-    for (var i = 0; i < vec1.length; i++) {
-        result.push(vec1[i] + vec2[i]);
+    var i, result = [];
+    for (i = 0; i < vec.length; i++) {
+        result.push(vec[i] * scalar);
     }
     return result;
 }
 
-module.exports = add;
+module.exports = scale;

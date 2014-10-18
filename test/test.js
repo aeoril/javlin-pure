@@ -5,6 +5,7 @@ var test = require('tape'),
     srcPath = '../src/',
     add = require(srcPath + 'add.js'),
     sub = require(srcPath + 'sub.js'),
+    scale = require(srcPath + 'scale.js'),
     vec0 = [],
     vec11 = [1],
     vec12 = [2],
@@ -31,5 +32,14 @@ test('subtracts two n-dimensional vectors', function(t) {
     t.deepEqual(sub(vec21, vec22), [4, -6], 'subtract 2 dimensional vector test');
     t.deepEqual(sub(vec31, vec32), [-3, -7, 9], 'subtract 3 dimensional vector test');
     t.deepEqual(sub(vec41, vec42), [-6, 8, 4, -4], 'subtract 4 dimensional vector test');
+    t.end();
+});
+test('scales an n-dimensional vector by numerical scalar', function(t) {
+    t.equal(Array.isArray(scale(vec21, 1)), true, 'returned result is an array');
+    t.deepEqual(scale(vec0, 1), vec0, 'subtract 0 dimensional vector test');
+    t.deepEqual(scale(vec11, -2), [-2], 'subtract 1 dimensional vector test');
+    t.deepEqual(scale(vec21, 3), [3, -6], 'subtract 2 dimensional vector test');
+    t.deepEqual(scale(vec31, -4), [-4, 8, -12], 'subtract 3 dimensional vector test');
+    t.deepEqual(scale(vec41, 5), [-5, 10, -15, 20], 'subtract 4 dimensional vector test');
     t.end();
 });

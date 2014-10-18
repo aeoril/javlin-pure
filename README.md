@@ -31,4 +31,9 @@ Subtracts two n-dimensional vectors (subtracts vec2 from vec1), returning the re
 
 var vec = sub([1, 2], [3, -4]); // vec === [-2, 6]
 
+### scale(vec, scalar)
+Scales an n-dimensional vector by scalar (just a number), returning the result in a new vector
+
+var vec = sub([1, 2], 3); // vec === [3, 6]
+
 [browserify]: http://browserify.org/
