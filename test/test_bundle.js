@@ -4160,8 +4160,9 @@ function base64DetectIncompleteChar(buffer) {
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
 
+'use strict';
+
 function add(vec1, vec2) {
-    'use strict';
     return vec1.reduce(function(acc, elem, index) {
         acc.push(elem + vec2[index]);
         return acc;
@@ -4174,21 +4175,23 @@ module.exports = add;
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
 
-var add = require('./add.js'),
-    sub = require('./sub.js'),
-    scale = require('./scale.js');
+'use strict';
+
+var add = require('./add'),
+    sub = require('./sub'),
+    scale = require('./scale');
 
 module.exports.add = add;
 module.exports.sub = sub;
 module.exports.scale = scale;
 
-},{"./add.js":24,"./scale.js":26,"./sub.js":27}],26:[function(require,module,exports){
+},{"./add":24,"./scale":26,"./sub":27}],26:[function(require,module,exports){
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
 
+'use strict';
+
 function scale(vec, scalar) {
-    'use strict';
-    'use strict';
     return vec.reduce(function(acc, elem, index) {
         acc.push(elem * scalar);
         return acc;
@@ -4201,9 +4204,9 @@ module.exports = scale;
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
 
+'use strict';
+
 function sub(vec1, vec2) {
-    'use strict';
-    'use strict';
     return vec1.reduce(function(acc, elem, index) {
         acc.push(elem - vec2[index]);
         return acc;
@@ -5057,7 +5060,7 @@ Test.skip = function (name_, _opts, _cb) {
 
 // vim: set softtabstop=4 shiftwidth=4:
 
-}).call(this,require('_process'),"/node_modules\\tape\\lib")
+}).call(this,require('_process'),"/test\\node_modules\\tape\\lib")
 },{"_process":10,"deep-equal":32,"defined":35,"events":6,"inherits":36,"path":9,"stream":22}],32:[function(require,module,exports){
 var pSlice = Array.prototype.slice;
 var objectKeys = require('./lib/keys.js');
@@ -5475,11 +5478,11 @@ function through (write, end, opts) {
 // Original Author:  aeoril
 
 var test = require('tape'),
-    javlin = require('../src/javlin'),
+    javlin = require('../src/index'),
     add = javlin.add,
     sub = javlin.sub,
     scale = javlin.scale,
-    vec0 = [],
+    vec0 =  [],
     vec11 = [1],
     vec12 = [2],
     vec21 = [1, -2.5],
@@ -5517,4 +5520,9 @@ test('scales an n-dimensional vector by numerical scalar', function(t) {
     t.end();
 });
 
-},{"../src/javlin":25,"tape":28}]},{},[40]);
+},{"../src/index":25,"tape":28}],41:[function(require,module,exports){
+
+require('./test');
+
+
+},{"./test":40}]},{},[41]);

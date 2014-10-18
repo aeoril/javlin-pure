@@ -1,24 +1,52 @@
 {
-    "name": "jvlin_test",
+    "name": "javlin",
     "version": "0.0.1",
-    "main": "test.js",
+    "author": "aeoril",
+    "description": "Just Another Javascript Vector Library",
+    "license": "MIT",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "npm run lint && node test/index.js",
+        "coverage": "covert test/*.js",
+        "coverage-quiet": "covert test/*.js --quiet",
+        "lint": "jscs test/*.js *.js",
+        "eccheck": "editorconfig-tools check *.js **/*.js > /dev/null"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/aeoril/javlin-keys.git"
+    },
+    "keywords": [
+        "javlin",
+        "vector",
+        "library"
+    ],
+    "dependencies": {},
     "devDependencies": {
-        "tape": "~2.4.0"
+        "tape": "~3.0.0",
+        "covert": "~1.0.0",
+        "jscs": "~1.6.2",
+        "editorconfig-tools": "~0.0.0"
     },
     "testling": {
-        "files": "test/test.js",
+        "files": "test/index.js",
         "browsers": [
-            "ie/6..latest",
-            "chrome/22..latest",
-            "firefox/16..latest",
-            "safari/latest",
-            "opera/11.0..latest",
-            "iphone/6",
-            "ipad/6",
-            "android-browser/latest"
+            "iexplore/6.0..latest",
+            "firefox/3.0..6.0",
+            "firefox/15.0..latest",
+            "firefox/nightly",
+            "chrome/4.0..10.0",
+            "chrome/20.0..latest",
+            "chrome/canary",
+            "opera/10.0..latest",
+            "opera/next",
+            "safari/4.0..latest",
+            "ipad/6.0..latest",
+            "iphone/6.0..latest",
+            "android-browser/4.2"
         ]
     },
-    "scripts": {
-        "test": "node test/test.js"
+    "engines": {
+        "node": ">= 0.4"
     }
 }
