@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "javlin unit tests",
   "main": "test.js",
-  "dependencies": { "tape": "3.0.1" },
+  "dependencies": {
+      "tape": "3.0.1"
+  },
   "scripts": {
     "test": "node test.js"
   },
