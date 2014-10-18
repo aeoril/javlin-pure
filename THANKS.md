@@ -36,7 +36,7 @@
   * Got me to write individual modules for individual functions in individual files
   * His code provided necessary understanding of node, node modules and tape test
   
-* Thanks to [George Katsevman][gkatsev] - gkatsev on freenode
+* Thanks to [Gary Katsevman][gkatsev] - gkatsev on freenode
   * Ongoing great suggestions
   * Helped get me to use node
   
