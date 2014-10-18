@@ -19,6 +19,6 @@
         ]
     },
     "scripts": {
-        "test": "tape test/test.js"
+        "test": "node test/test.js"
     }
 }
