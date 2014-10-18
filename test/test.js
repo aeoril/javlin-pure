@@ -36,7 +36,7 @@ test('subtracts two n-dimensional vectors', function(t) {
 });
 test('scales an n-dimensional vector by numerical scalar', function(t) {
     t.equal(Array.isArray(scale(vec21, 1)), true, 'returned result is an array');
-    t.deepEqual(scale(vec0, 1), vec0, '0 dimensional vector test');
+    t.deepEqual(scale(vec0, 3), vec0, '0 dimensional vector test');
     t.deepEqual(scale(vec11, -2.5), [-2.5], '1 dimensional vector test');
     t.deepEqual(scale(vec21, 3), [3, -7.5], '2 dimensional vector test');
     t.deepEqual(scale(vec31, -4), [-4.8, 8, -14], '3 dimensional vector test');
