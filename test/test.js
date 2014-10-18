@@ -2,10 +2,10 @@
 // Original Author:  aeoril
 
 var test = require('tape'),
-    srcPath = '../src/',
-    add = require(srcPath + 'add.js'),
-    sub = require(srcPath + 'sub.js'),
-    scale = require(srcPath + 'scale.js'),
+    javlin = require('../src/javlin'),
+    add = javlin.add,
+    sub = javlin.sub,
+    scale = javlin.scale,
     vec0 = [],
     vec11 = [1],
     vec12 = [2],
