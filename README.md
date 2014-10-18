@@ -34,6 +34,6 @@ var vec = sub([1, 2], [3, -4]); // vec === [-2, 6]
 ### scale(vec, scalar)
 Scales an n-dimensional vector by scalar (just a number), returning the result in a new vector
 
-var vec = sub([1, 2], 3); // vec === [3, 6]
+var vec = scale([1, 2], 3); // vec === [3, 6]
 
 [browserify]: http://browserify.org/
