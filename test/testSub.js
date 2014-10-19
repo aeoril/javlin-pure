@@ -2,10 +2,7 @@
 // Original Author:  aeoril
 
 var test = require('tape'),
-    javlin = require('../src/index'),
-    add = javlin.add,
-    sub = javlin.sub,
-    scale = javlin.scale,
+    sub = require('../src/sub'),
     vec0 =  [],
     vec11 = [1],
     vec12 = [2],
