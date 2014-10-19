@@ -7,9 +7,15 @@
     "main": "src/index.js",
     "scripts": {
         "test": "npm run lint && node test/index.js",
+        "testAdd": "npm run lintAdd && node test/testAdd.js",
+        "testSub": "npm run lintSub && node test/testSub.js",
+        "testScale": "npm run lintAdd && node test/testScale.js",
         "coverage": "covert test/*.js",
         "coverage-quiet": "covert test/*.js --quiet",
-        "lint": "jscs test/*.js *.js",
+        "lint": "jscs test/index.js test/testAdd.js test/testSub.js test/testScale.js src/add.js src/sub.js src/scale.js",
+        "lintAdd": "jscs test/testAdd.js src/add.js",
+        "lintSub": "jscs test/testSub.js src/sub.js",
+        "lintScale": "jscs test/testScale.js src/scale.js",
         "eccheck": "editorconfig-tools check *.js **/*.js > /dev/null"
     },
     "repository": {
@@ -48,5 +54,8 @@
     },
     "engines": {
         "node": ">= 0.4"
+    },
+    "jscsConfig": {
+        "preset": "crockford"
     }
 }

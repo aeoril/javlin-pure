@@ -1,3 +1,3 @@
-
-require('./test');
-
+require('./testAdd');
+require('./testSub');
+require('./testScale');

@@ -4,10 +4,9 @@
 'use strict';
 
 function sub(vec1, vec2) {
-    return vec1.reduce(function(acc, elem, index) {
-        acc.push(elem - vec2[index]);
-        return acc;
-    }, []);
+    return vec1.map(function (elem, index) {
+        return elem - vec2[index];
+    });
 }
 
 module.exports = sub;

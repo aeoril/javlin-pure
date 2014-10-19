@@ -4,10 +4,9 @@
 'use strict';
 
 function scale(vec, scalar) {
-    return vec.reduce(function(acc, elem, index) {
-        acc.push(elem * scalar);
-        return acc;
-    }, []);
+    return vec.map(function (elem, index) {
+        return elem * scalar;
+    });
 }
 
 module.exports = scale;
