@@ -6,7 +6,6 @@
 'use strict';
 
 var scale = require('./scale'),
-    mag = require('./mag'),
     dot = require('./dot');
 
 function proj(vec1, vec2) {
