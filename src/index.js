@@ -7,8 +7,12 @@
 
 var add = require('./add'),
     sub = require('./sub'),
-    scale = require('./scale');
+    scale = require('./scale'),
+    mag = require('./mag'),
+    norm = require('./norm');
 
 module.exports.add = add;
 module.exports.sub = sub;
 module.exports.scale = scale;
+module.exports.mag = mag;
+module.exports.norm = norm;

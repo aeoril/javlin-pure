@@ -18,7 +18,7 @@ var test = require('tape'),
     vec42 = [5, -6.6, -7, 8],
     vecAlpha = ['a'];
 
-test('subtracts two n-dimensional vectors', function (t) {
+test('tests sub.js (n-dimensional vector subtraction)', function (t) {
     t.equal(Array.isArray(sub(vec21, vec22)), true, 'returned result is an array');
     t.throws(function () { return sub(); }, null, 'Zero arguments');
     t.throws(function () { return sub(vec11); }, null, 'One argument');

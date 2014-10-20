@@ -16,7 +16,7 @@ var test = require('tape'),
     vec42 = [2.1, -1.9, 7.5, 4.1],
     vecAlpha = ['a'];
 
-test('scales an n-dimensional vector by numerical scalar', function (t) {
+test('tests mag.js (n-dimensional vector magnitude)', function (t) {
     t.equal(typeof mag(vec41) === 'number', true, 'returned result is a number');
     t.throws(function () { return mag(); }, null, 'Zero arguments');
     t.throws(function () { return mag(3); }, null, 'Non-array argument');
@@ -27,6 +27,6 @@ test('scales an n-dimensional vector by numerical scalar', function (t) {
     t.deepEqual(mag(vec21), 5, '2 dimensional vector');
     t.deepEqual(mag(vec31), 3, '3 dimensional vector');
     t.deepEqual(mag(vec41), 5, '4 dimensional vector');
-    t.deepEqual(mag(vec42).toFixed(10), '9.0044433476', '4 dimensional vector');
+    t.deepEqual(mag(vec42).toFixed(10), '9.0044433476', '4 dimensional vector floats');
     t.end();
 });

@@ -10,3 +10,5 @@ require('./testAdd');
 require('./testSub');
 require('./testScale');
 require('./testMag');
+require('./testNorm');
+require('./testDot');

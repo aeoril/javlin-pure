@@ -14,7 +14,7 @@ var test = require('tape'),
     vec41 = [-1.1, 2, -3.3, 4],
     vecAlpha = ['a'];
 
-test('scales an n-dimensional vector by numerical scalar', function (t) {
+test('tests scale.js (n-dimensional vector scaling)', function (t) {
     t.equal(Array.isArray(scale(vec21, 3)), true, 'returned result is an array');
     t.throws(function () { return scale(); }, null, 'Zero arguments');
     t.equals(isNaN(scale(vec11)[0]), true, 'One argument');

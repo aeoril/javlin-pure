@@ -18,7 +18,7 @@ var test = require('tape'),
     vec42 = [5, -6.6, -7, 8],
     vecAlpha = ['a'];
 
-test('adds two n-dimensional vectors', function (t) {
+test('tests add.js (n-dimensional vector addition)', function (t) {
     t.equal(Array.isArray(add(vec21, vec22)), true, 'returned result is an array');
     t.throws(function () { return add(); }, null, 'Zero arguments');
     t.throws(function () { return add(vec11); }, null, 'One argument');
