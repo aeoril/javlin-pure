@@ -19,19 +19,19 @@ var test = require('tape'),
     vecAlpha = ['a'];
 
 test('tests dot.js (n-dimensional vector dot product (inner product))', function (t) {
-    t.equal(Array.isArray(dot(vec21, vec22)), true, 'returned result is an array');
+    t.equal(typeof dot(vec21, vec22) === 'number', true, 'returned result is a number');
     t.throws(function () { return dot(); }, null, 'Zero arguments');
     t.throws(function () { return dot(vec11); }, null, 'One argument');
     t.throws(function () { return dot(3, vec12); }, null, 'Non-array first argument');
-    t.equal(isNaN(dot(vec11, 3)[0]), true, 'Non-array second argument');
-    t.equal(isNaN(dot(vec31, vec22)[2]), true, 'First argument has more elements');
-    t.deepEqual(dot(vec11, vec22), [-9], 'Second argument has more elements');
-    t.equal(isNaN(dot(vecAlpha, vec12)[0]), true, 'First argument has alpha element');
-    t.equal(isNaN(dot(vec11, vecAlpha)[0]), true, 'Second argument has alpha element');
-    t.deepEqual(dot(vec0, vec0), [], '0 dimensional vectors');
-    t.deepEqual(dot(vec11, vec12), [6], '1 dimensional vectors');
-    t.deepEqual(dot(vec21, vec22), [-3, -10], '2 dimensional vectors');
-    t.deepEqual(dot(vec31, vec32), [4.8, -10, -21], '3 dimensional vectors');
-    t.deepEqual(dot(vec41, vec42), [-5.5, -13.2, 23.8, 32], '4 dimensional vectors');
+    t.equal(isNaN(dot(vec11, 3)), true, 'Non-array second argument');
+    t.equal(isNaN(dot(vec31, vec22)), true, 'First argument has more elements');
+    t.deepEqual(dot(vec11, vec22), -9, 'Second argument has more elements');
+    t.equal(isNaN(dot(vecAlpha, vec12)), true, 'First argument has alpha element');
+    t.equal(isNaN(dot(vec11, vecAlpha)), true, 'Second argument has alpha element');
+    t.equal(dot(vec0, vec0), 0, '0 dimensional vectors');
+    t.equal(dot(vec11, vec12), 6, '1 dimensional vectors');
+    t.equal(dot(vec21, vec22), -13, '2 dimensional vectors');
+    t.equal(dot(vec31, vec32), -26.2, '3 dimensional vectors');
+    t.equal(dot(vec41, vec42), 37.1, '4 dimensional vectors');
     t.end();
 });

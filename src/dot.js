@@ -6,8 +6,8 @@
 'use strict';
 
 function dot(vec1, vec2) {
-    return vec1.map(function (elem, index) {
-        return elem * vec2[index];
+    return vec1.reduce(function (acc, elem, index) {
+        return acc + elem * vec2[index];
     }, 0);
 }
 
