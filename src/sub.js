@@ -1,5 +1,7 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
+//
+// sub.js - given two n-dimensional vectors, subtracts the second from the first
 
 'use strict';
 

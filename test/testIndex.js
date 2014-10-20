@@ -1,5 +1,9 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
+//
+// testIndex.js - tests index.js module
+
+'use strict';
 
 var test = require('tape'),
     javlin = require('../src/index'),

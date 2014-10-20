@@ -1,5 +1,9 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
+//
+// testSub.js - tests sub.js module
+
+'use strict';
 
 var test = require('tape'),
     sub = require('../src/sub'),
@@ -18,8 +22,8 @@ test('subtracts two n-dimensional vectors', function (t) {
     t.equal(Array.isArray(sub(vec21, vec22)), true, 'returned result is an array');
     t.throws(function () { return sub(); }, null, 'Zero arguments');
     t.throws(function () { return sub(vec11); }, null, 'One argument');
-    t.throws(function () { return sub(3, vec12); }, null, 'Non-array first element');
-    t.equal(isNaN(sub(vec11, 3)[0]), true, 'Non-array second element');
+    t.throws(function () { return sub(3, vec12); }, null, 'Non-array first argument');
+    t.equal(isNaN(sub(vec11, 3)[0]), true, 'Non-array second argument');
     t.equal(isNaN(sub(vec31, vec22)[2]), true, 'First argument has more elements');
     t.deepEqual(sub(vec11, vec22), [4], 'Second argument has more elements');
     t.equal(isNaN(sub(vecAlpha, vec12)[0]), true, 'First argument has alpha element');

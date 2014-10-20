@@ -1,5 +1,9 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
+//
+// testAdd.js - tests add.js module
+
+'use strict';
 
 var test = require('tape'),
     add = require('../src/add'),
@@ -18,8 +22,8 @@ test('adds two n-dimensional vectors', function (t) {
     t.equal(Array.isArray(add(vec21, vec22)), true, 'returned result is an array');
     t.throws(function () { return add(); }, null, 'Zero arguments');
     t.throws(function () { return add(vec11); }, null, 'One argument');
-    t.throws(function () { return add(3, vec12); }, null, 'Non-array first element');
-    t.equal(isNaN(add(vec11, 3)[0]), true, 'Non-array second element');
+    t.throws(function () { return add(3, vec12); }, null, 'Non-array first argument');
+    t.equal(isNaN(add(vec11, 3)[0]), true, 'Non-array second argument');
     t.equal(isNaN(add(vec31, vec22)[2]), true, 'First argument has more elements');
     t.deepEqual(add(vec11, vec22), [-2], 'Second argument has more elements');
     t.equal(isNaN(add(vecAlpha, vec12)[0]), true, 'First argument has alpha element');

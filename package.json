@@ -10,14 +10,16 @@
         "testAdd": "npm run lintAdd && node test/testAdd.js",
         "testSub": "npm run lintSub && node test/testSub.js",
         "testScale": "npm run lintScale && node test/testScale.js",
+        "testMag": "npm run lintMag && node test/testMag.js",
         "testIndex": "npm run lintIndex && node test/testIndex.js",
         "coverage": "covert test/*.js",
         "coverage-quiet": "covert test/*.js --quiet",
-        "lint": "npm run lintIndex && npm run lintAdd && npm run lintSub && npm run lintScale",
+        "lint": "npm run lintIndex && npm run lintAdd && npm run lintSub && npm run lintScale && npm run lintMag",
         "lintIndex": "jscs test/index.js test/testIndex.js src/index.js",
         "lintAdd": "jscs test/testAdd.js src/add.js",
         "lintSub": "jscs test/testSub.js src/sub.js",
         "lintScale": "jscs test/testScale.js src/scale.js",
+        "lintScale": "jscs test/testMag.js src/mag.js",
         "eccheck": "editorconfig-tools check *.js **/*.js > /dev/null"
     },
     "repository": {

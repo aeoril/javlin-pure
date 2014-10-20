@@ -1,19 +1,18 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
+//
+// testScale.js - test scale.js module
+
+'use strict';
 
 var test = require('tape'),
     scale = require('../src/scale'),
     vec0 =  [],
     vec11 = [1],
-    vec12 = [2],
     vec21 = [1, -2.5],
-    vec22 = [-3, 4],
     vec31 = [1.2, -2, 3.5],
-    vec32 = [4, 5, -6],
     vec41 = [-1.1, 2, -3.3, 4],
-    vec42 = [5, -6.6, -7, 8],
-    vecAlpha = ['a'],
-    vecNaN = [NaN];
+    vecAlpha = ['a'];
 
 test('scales an n-dimensional vector by numerical scalar', function (t) {
     t.equal(Array.isArray(scale(vec21, 3)), true, 'returned result is an array');
