@@ -10,8 +10,7 @@ var scale = require('./scale'),
     dot = require('./dot');
 
 function proj(vec1, vec2) {
-    var vec2Mag = mag(vec2);
-    return scale(vec2, Math.abs(dot(vec1, vec2)) / (vec2Mag * vec2Mag));
+    return scale(vec2, dot(vec1, vec2) / dot(vec2, vec2));
 }
 
 module.exports = proj;
