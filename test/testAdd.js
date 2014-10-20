@@ -16,17 +16,18 @@ var test = require('tape'),
 
 test('adds two n-dimensional vectors', function (t) {
     t.equal(Array.isArray(add(vec21, vec22)), true, 'returned result is an array');
-    t.equal(add(vec21, vec22).length, 2, 'returned result has proper length');
-    t.throws(function () { return add(); }, null, 'Zero arguments throws');
-    t.throws(function () { return add(vec11); }, null, 'One argument throws');
-    t.deepEqual(add(vec0, vec0), [], '0 dimensional vector test');
-    t.deepEqual(add(vec11, vec12), [3], '1 dimensional vector test');
-    t.deepEqual(add(vec21, vec22), [-2, 1.5], '2 dimensional vector test');
-    t.deepEqual(add(vec31, vec32), [5.2, 3, -2.5], '3 dimensional vector test');
-    t.deepEqual(add(vec41, vec42), [3.9, -4.6, -10.3, 12], '4 dimensional vector test');
+    t.throws(function () { return add(); }, null, 'Zero arguments');
+    t.throws(function () { return add(vec11); }, null, 'One argument');
+    t.throws(function () { return add(3, vec12); }, null, 'Non-array first element');
+    t.equal(isNaN(add(vec11, 3)[0]), true, 'Non-array second element');
     t.equal(isNaN(add(vec31, vec22)[2]), true, 'First argument has more elements');
     t.deepEqual(add(vec11, vec22), [-2], 'Second argument has more elements');
     t.equal(isNaN(add(vecAlpha, vec12)[0]), true, 'First argument has alpha element');
     t.equal(isNaN(add(vec11, vecAlpha)[0]), true, 'Second argument has alpha element');
+    t.deepEqual(add(vec0, vec0), [], '0 dimensional vectors');
+    t.deepEqual(add(vec11, vec12), [3], '1 dimensional vectors');
+    t.deepEqual(add(vec21, vec22), [-2, 1.5], '2 dimensional vectors');
+    t.deepEqual(add(vec31, vec32), [5.2, 3, -2.5], '3 dimensional vectors');
+    t.deepEqual(add(vec41, vec42), [3.9, -4.6, -10.3, 12], '4 dimensional vectors');
     t.end();
 });
