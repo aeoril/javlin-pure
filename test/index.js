@@ -12,3 +12,4 @@ require('./testScale');
 require('./testMag');
 require('./testNorm');
 require('./testDot');
+require('./testProj');
