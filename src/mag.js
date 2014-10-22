@@ -5,10 +5,10 @@
 
 'use strict';
 
+var dot = require('./dot');
+
 function mag(vec) {
-    return Math.sqrt(vec.reduce(function (acc, elem) {
-        return acc + elem * elem;
-    }, 0));
+    return Math.sqrt(dot(vec, vec));
 }
 
 module.exports = mag;
