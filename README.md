@@ -36,4 +36,37 @@ Scales an n-dimensional vector by scalar (just a number), returning the result i
 
 var vec = scale([1, 2], 3); // vec === [3, 6]
 
+### dot(vec1, vec2)
+Computes the dot (inner) product of two n-dimensional vectors
+
+var value = dot([1, 2], [3, 4]); // value === 11
+
+### mag(vec)
+Computes the magnitude (length) of an n-dimensional vector
+
+var value = mag([3, 4]); // value === 5
+
+### norm(vec)
+Normalizes an n-dimensional vector (returns vector of magnitude 1, or unit vector, retaining direction)
+
+var vec = norm([3, 4]); // vec === [.6, .8]
+
+### proj(vec1, vec2)
+Returns the projection of n-dimensional vector vec1 along vec2
+
+var vec = proj([3, 4, 5], [6, 8, 0]); // vec === [3, 4, 0]
+
+### angle(vec)
+Returns the angle from -PI to PI of a 2-dimensional vector.  Angle is 0 along the positive x axis and
+positive counterclockwise.  This is a simple wrapper for [Math.atan2(y, x)][atan2]
+
+var value = angle([1, 1]); // value === 0.785
+
+### angleN(vec)
+Returns the angle from 0 to PI of an n-dimensional vector.  Angle is 0 along the positive x axis and
+positive counterclockwise.  NOTE:  This function does not retain angle sign information
+
+var value = angleN([1, 1]); // value === 0.785
+
 [browserify]: http://browserify.org/
+[atan2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2

@@ -15,7 +15,7 @@ var test = require('tape'),
     vec31 = [1.2, -3.5, 2],
     vec32 = [-1.2, 3.5, -2],
     vec41 = [1, 1, 1, 1],
-    vec42 = [1, 1, 1, 0],
+    vec42 = [2, 2, 2, 0],
     vecAlpha = ['a'];
 
 test('tests proj.js (n-dimensional vector projection)', function (t) {

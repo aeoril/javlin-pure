@@ -8,8 +8,8 @@
 var mag = require('./mag'),
     dot = require('./dot');
 
-function angle(vec1, vec2) {
+function angleN(vec1, vec2) {
     return Math.acos(dot(vec1, vec2) / mag(vec1) * mag(vec2));
 }
 
-module.exports = angle;
+module.exports = angleN;
