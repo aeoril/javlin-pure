@@ -21,7 +21,7 @@ test('tests mag.js (n-dimensional vector magnitude)', function (t) {
     t.throws(function () { return mag(); }, null, 'Zero arguments');
     t.throws(function () { return mag(3); }, null, 'Non-array argument');
     t.equal(isNaN(mag(vecAlpha)), true, 'Argument has alpha element');
-    t.deepEqual(mag(vec0), 0, '0 dimensional vectors');
+    t.deepEqual(mag(vec0), 0, '0 dimensional vector');
     t.deepEqual(mag(vec11), 5.3, '1 dimensional vector');
     t.deepEqual(mag(vec12), 2, '1 dimensional vector');
     t.deepEqual(mag(vec21), 5, '2 dimensional vector');

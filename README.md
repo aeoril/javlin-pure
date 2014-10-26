@@ -57,16 +57,16 @@ Returns the projection of n-dimensional vector vec1 along vec2
 var vec = proj([3, 4, 5], [6, 8, 0]); // vec === [3, 4, 0]
 
 ### angle(vec)
-Returns the angle from -PI to PI of a 2-dimensional vector.  Angle is 0 along the positive x axis and
-positive counterclockwise.  This is a simple wrapper for [Math.atan2(y, x)][atan2]
-
-var value = angle([1, 1]); // value === 0.785
-
-### angleN(vec)
-Returns the angle from 0 to PI of an n-dimensional vector.  Angle is 0 along the positive x axis and
+Returns the angle in radians from 0 to PI of an n-dimensional vector.  Angle is 0 along the positive x axis and
 positive counterclockwise.  NOTE:  This function does not retain angle sign information
 
-var value = angleN([1, 1]); // value === 0.785
+var value = angleN([5, 5, 0, 0, 0]); // value === 0.785
+
+### angle2d(vec)
+Returns the angle in radians from -PI to PI of a 2-dimensional vector.  Angle is 0 along the positive x axis and
+positive counterclockwise.  This is a simple wrapper for [Math.atan2(y, x)][atan2]
+
+var value = angle2d([1, 1]); // value === 0.785
 
 [browserify]: http://browserify.org/
 [atan2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2

@@ -14,3 +14,4 @@ require('./testMag');
 require('./testNorm');
 require('./testProj');
 require('./testAngle');
+require('./testAngle2d');

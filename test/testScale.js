@@ -21,7 +21,7 @@ test('tests scale.js (n-dimensional vector scaling)', function (t) {
     t.throws(function () { return scale(3, 5); }, null, 'Non-array first element');
     t.equal(isNaN(scale(vecAlpha, -2)[0]), true, 'First argument has alpha element');
     t.equal(isNaN(scale(vec11, 'a')[0]), true, 'Non-number second argument');
-    t.deepEqual(scale(vec0, 3), vec0, '0 dimensional vectors');
+    t.deepEqual(scale(vec0, 3), vec0, '0 dimensional vector');
     t.deepEqual(scale(vec11, -2.5), [-2.5], '1 dimensional vector');
     t.deepEqual(scale(vec21, 3), [3, -7.5], '2 dimensional vector');
     t.deepEqual(scale(vec31, -4), [-4.8, 8, -14], '3 dimensional vector');

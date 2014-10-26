@@ -22,7 +22,7 @@ test('tests norm.js (n-dimensional vector normalization)', function (t) {
     t.throws(function () { return norm(); }, null, 'Zero arguments');
     t.throws(function () { return norm(3); }, null, 'Non-array argument');
     t.equal(isNaN(norm(vecAlpha)[0]), true, 'Argument has alpha element');
-    t.deepEqual(norm(vec0), vec0, '0 dimensional vectors');
+    t.deepEqual(norm(vec0), vec0, '0 dimensional vector');
     t.equal(mag(norm(vec11)), 1, '1 dimensional vector');
     t.equal(mag(norm(vec12)), 1, '1 dimensional vector');
     t.equal(mag(norm(vec21)), 1, '2 dimensional vector');
