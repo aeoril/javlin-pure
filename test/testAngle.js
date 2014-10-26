@@ -6,27 +6,21 @@
 'use strict';
 
 var test = require('tape'),
-    angle = require('./angle'),
+    angle = require('../src/angle'),
     vec0 =  [],
-    vec11 = [-5.3],
-    vec12 = [-2],
-    vec21 = [3, 4],
-    vec31 = [-2, 2, -1],
-    vec41 = [1, 2, -2, 4],
-    vec42 = [2.1, -1.9, 7.5, 4.1],
+    vec11 = [3],
+    vec21 = [3, -4],
+    vec22 = [1, 1],
     vecAlpha = ['a'];
 
 test('tests angle.js (2-dimensional vector angle)', function (t) {
-    t.equal(typeof angle(vec41) === 'number', true, 'returned result is a number');
+    t.equal(typeof angle(vec21) === 'number', true, 'returned result is a number');
     t.throws(function () { return angle(); }, null, 'Zero arguments');
-    t.throws(function () { return angle(3); }, null, 'Non-array argument');
+    t.equal(isNaN(angle(3)), true, 'Non-array argument');
     t.equal(isNaN(angle(vecAlpha)), true, 'Argument has alpha element');
-    t.deepEqual(angle(vec0), 0, '0 dimensional vectors');
-    t.deepEqual(angle(vec11), 5.3, '1 dimensional vector');
-    t.deepEqual(angle(vec12), 2, '1 dimensional vector');
-    t.deepEqual(angle(vec21), 5, '2 dimensional vector');
-    t.deepEqual(angle(vec31), 3, '3 dimensional vector');
-    t.deepEqual(angle(vec41), 5, '4 dimensional vector');
-    t.deepEqual(angle(vec42).toFixed(10), '9.0044433476', '4 dimensional vector floats');
+    t.equal(isNaN(angle(vec0)), true, '0 dimensional vectors');
+    t.equal(isNaN(angle(vec11)), true, '1 dimensional vector');
+    t.equal(Number(angle(vec21).toFixed(9)), -0.927295218, '2 dimensional vector');
+    t.equal(Number(angle(vec22).toFixed(9)), 0.785398163, '2 dimensional vector');
     t.end();
 });

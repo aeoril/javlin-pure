@@ -8,11 +8,17 @@
 var add = require('./add'),
     sub = require('./sub'),
     scale = require('./scale'),
+    dot = require('./dot'),
     mag = require('./mag'),
-    norm = require('./norm');
+    norm = require('./norm'),
+    proj = require('./proj'),
+    angle = require('./angle');
 
 module.exports.add = add;
 module.exports.sub = sub;
 module.exports.scale = scale;
+module.exports.dot = dot;
 module.exports.mag = mag;
 module.exports.norm = norm;
+module.exports.proj = proj;
+module.exports.angle = angle;
