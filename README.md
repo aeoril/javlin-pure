@@ -71,7 +71,7 @@ var value = angle2d([3, 4]); // value === 0.927
 ### fromPolar2d(mag, angle)
 Given a magnitude and angle in radians positive counterclockwise from the x axis returns a 2-dimensional vector
 
-var vec = fromPolar2d(5, 0.927); // vec === [3, 4]
+var vec = fromPolar2d(5, 0.927); // vec === [3, 4] (very close approximations)
 
 [browserify]: http://browserify.org/
 [atan2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2
