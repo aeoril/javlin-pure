@@ -15,7 +15,8 @@ var test = require('tape'),
     norm = javlin.norm,
     proj = javlin.proj,
     angle = javlin.angle,
-    angle2d = javlin.angle2d;
+    angle2d = javlin.angle2d,
+    fromPolar2d = javlin.fromPolar2d;
 
 test('tests index.js (combined javlin exports)', function (t) {
     t.equal(typeof add === 'function', true, 'add is a function');
@@ -27,5 +28,6 @@ test('tests index.js (combined javlin exports)', function (t) {
     t.equal(typeof proj === 'function', true, 'proj is a function');
     t.equal(typeof angle === 'function', true, 'angle is a function');
     t.equal(typeof angle2d === 'function', true, 'angle2d is a function');
+    t.equal(typeof fromPolar2d === 'function', true, 'fromPolar2d is a function');
     t.end();
 });

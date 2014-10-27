@@ -15,3 +15,4 @@ require('./testNorm');
 require('./testProj');
 require('./testAngle');
 require('./testAngle2d');
+require('./testFromPolar2d');

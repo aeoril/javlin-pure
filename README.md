@@ -66,7 +66,12 @@ var value = angleN([5, 5, 0, 0, 0]); // value === 0.785
 Returns the angle in radians from -PI to PI of a 2-dimensional vector.  Angle is 0 along the positive x axis and
 positive counterclockwise.  This is a simple wrapper for [Math.atan2(y, x)][atan2]
 
-var value = angle2d([1, 1]); // value === 0.785
+var value = angle2d([3, 4]); // value === 0.927
+
+### fromPolar2d(mag, angle)
+Given a magnitude and angle in radians positive counterclockwise from the x axis returns a 2-dimensional vector
+
+var vec = fromPolar2d(5, 0.927); // vec === [3, 4]
 
 [browserify]: http://browserify.org/
 [atan2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2

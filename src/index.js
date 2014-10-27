@@ -13,7 +13,8 @@ var add = require('./add'),
     norm = require('./norm'),
     proj = require('./proj'),
     angle = require('./angle'),
-    angle2d = require('./angle2d');
+    angle2d = require('./angle2d'),
+    fromPolar2d = require('./fromPolar2d');
 
 module.exports.add = add;
 module.exports.sub = sub;
@@ -24,3 +25,4 @@ module.exports.norm = norm;
 module.exports.proj = proj;
 module.exports.angle = angle;
 module.exports.angle2d = angle2d;
+module.exports.fromPolar2d = fromPolar2d;
