@@ -18,7 +18,7 @@ var test = require('tape'),
     angle2d = javlinPure.angle2d,
     fromPolar2d = javlinPure.fromPolar2d;
 
-test('tests index.js (combined javlinPure exports)', function (t) {
+test('tests index.js (combined javlin-pure exports)', function (t) {
     t.equal(typeof add === 'function', true, 'add is a function');
     t.equal(typeof sub === 'function', true, 'sub is a function');
     t.equal(typeof scale === 'function', true, 'scale is a function');

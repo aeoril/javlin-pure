@@ -1,7 +1,7 @@
 // Copyright © 2014 QuarksCode.  MIT License - see http://opensource.org/licenses/MIT or LICENSE.md file
 // Original Author:  aeoril
 //
-// index.js - combines individual javlinPure modules into one module
+// index.js - combines individual javlin-pure modules into one module
 
 'use strict';
 

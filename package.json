@@ -1,5 +1,5 @@
 {
-    "name": "javlinPure",
+    "name": "javlin-pure",
     "version": "0.0.1",
     "author": "aeoril",
     "description": "Just Another Javascript Vector Library",
@@ -38,11 +38,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/aeoril/javlinPure.git"
+        "url": "git://github.com/aeoril/javlin-pure.git"
     },
     "keywords": [
         "javlin",
-        "javlinPure",
+        "javlin-pure",
         "vector",
         "math",
         "library"
