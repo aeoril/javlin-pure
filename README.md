@@ -19,7 +19,8 @@ Each function resides in its own individual file and is designed to run in Node.
 [Browserify][browserify].  Dependencies are included with 'require()' and each function is exported via "module.exports"
 
 ### Unit Testing
-Full unit testing suite implemented using npm and tape, configured for Testling
+Full unit testing suite implemented using Tape (TAP output) for node, npm and Testling.  Easily configurable for
+Travis-ci.  Includes "pretty-print" tests using tap-spec for Windows and Linux.
 
 ## APIs
 The following are the API descriptions.  The file name is the API (function) name followed by ".js"

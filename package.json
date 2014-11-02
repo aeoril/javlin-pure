@@ -50,9 +50,8 @@
     "dependencies": {},
     "devDependencies": {
         "tape": "~3.0.0",
-        "covert": "~1.0.0",
+        "tap-spec": "~1.0.1",
         "jscs": "~1.6.2",
-        "editorconfig-tools": "~0.0.0"
     },
     "testling": {
         "files": "test/index.js",
