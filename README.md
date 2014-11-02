@@ -18,6 +18,9 @@ All vector functions are stateless - they are not methods of a class instance pr
 Each function resides in its own individual file and is designed to run in Node.js.  They can be run in a browser using
 [Browserify][browserify].  Dependencies are included with 'require()' and each function is exported via "module.exports"
 
+### Unit Testing
+Full unit testing suite implemented using npm and tape, configured for Testling
+
 ## APIs
 The following are the API descriptions.  The file name is the API (function) name followed by ".js"
 
