@@ -14,6 +14,7 @@ var test = require('tape'),
     vec31 = [-2, 2, -1],
     vec41 = [1, 2, -2, 4],
     vec42 = [2.1, -1.9, 7.5, 4.1],
+    vec42Copy = vec42.slice(),
     vecAlpha = ['a'];
 
 test('tests mag.js (n-dimensional vector magnitude)', function (t) {
@@ -28,5 +29,6 @@ test('tests mag.js (n-dimensional vector magnitude)', function (t) {
     t.deepEqual(mag(vec31), 3, '3 dimensional vector');
     t.deepEqual(mag(vec41), 5, '4 dimensional vector');
     t.deepEqual(mag(vec42).toFixed(10), '9.0044433476', '4 dimensional vector floats');
+    t.deepEqual(vec42, vec42Copy, 'Purity confirmed with 4d vector');
     t.end();
 });

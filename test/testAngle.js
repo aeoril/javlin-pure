@@ -15,7 +15,9 @@ var test = require('tape'),
     vec31 = [1, 0, 0],
     vec32 = [1, 1, 0],
     vec41 = [1, 0, 0, 0],
+    vec41Copy = vec41.slice(),
     vec42 = [1, 1, 0, 0],
+    vec42Copy = vec42.slice(),
     vecAlpha = ['a'];
 
 test('tests angle.js (n-dimensional vector angle)', function (t) {
@@ -32,5 +34,6 @@ test('tests angle.js (n-dimensional vector angle)', function (t) {
     t.equal(Number(angle(vec21, vec22).toFixed(9)), 0.785398163, '2 dimensional vectors');
     t.equal(Number(angle(vec31, vec32).toFixed(9)), 0.785398163, '3 dimensional vectors');
     t.equal(Number(angle(vec41, vec42).toFixed(9)), 0.785398163, '4 dimensional vectors');
+    t.deepEqual([vec41, vec42], [vec41Copy, vec42Copy], 'Purity confirmed with 4d vectors');
     t.end();
 });

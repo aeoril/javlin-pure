@@ -6,19 +6,19 @@
 'use strict';
 
 var test = require('tape'),
-    javlin = require('../src/index'),
-    add = javlin.add,
-    sub = javlin.sub,
-    scale = javlin.scale,
-    dot = javlin.dot,
-    mag = javlin.mag,
-    norm = javlin.norm,
-    proj = javlin.proj,
-    angle = javlin.angle,
-    angle2d = javlin.angle2d,
-    fromPolar2d = javlin.fromPolar2d;
+    javlinPure = require('../src/index'),
+    add = javlinPure.add,
+    sub = javlinPure.sub,
+    scale = javlinPure.scale,
+    dot = javlinPure.dot,
+    mag = javlinPure.mag,
+    norm = javlinPure.norm,
+    proj = javlinPure.proj,
+    angle = javlinPure.angle,
+    angle2d = javlinPure.angle2d,
+    fromPolar2d = javlinPure.fromPolar2d;
 
-test('tests index.js (combined javlin exports)', function (t) {
+test('tests index.js (combined javlinPure exports)', function (t) {
     t.equal(typeof add === 'function', true, 'add is a function');
     t.equal(typeof sub === 'function', true, 'sub is a function');
     t.equal(typeof scale === 'function', true, 'scale is a function');

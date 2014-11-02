@@ -15,7 +15,9 @@ var test = require('tape'),
     vec31 = [1.2, -2, 3.5],
     vec32 = [4, 5, -6],
     vec41 = [-1.1, 2, -3.4, 4],
+    vec41Copy = vec41.slice(),
     vec42 = [5, -6.6, -7, 8],
+    vec42Copy = vec42.slice(),
     vecAlpha = ['a'];
 
 test('tests dot.js (n-dimensional vector dot product (inner product))', function (t) {
@@ -33,5 +35,6 @@ test('tests dot.js (n-dimensional vector dot product (inner product))', function
     t.equal(dot(vec21, vec22), -13, '2 dimensional vectors');
     t.equal(dot(vec31, vec32), -26.2, '3 dimensional vectors');
     t.equal(dot(vec41, vec42), 37.1, '4 dimensional vectors');
+    t.deepEqual([vec41, vec42], [vec41Copy, vec42Copy], 'Purity confirmed with 4d vectors');
     t.end();
 });

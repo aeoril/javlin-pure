@@ -1,5 +1,5 @@
-# javlin (pronounced "javelin")
-## Just Another Vector Library In Node
+# javlinPure (pronounced "javelin")
+## Just Another Vector Library In Node - Pure
 Pure, stateless, modular vector manipulation functions written in Javascript.  Designed for Node.js.
 
 ## Key Attributes

@@ -15,6 +15,7 @@ var test = require('tape'),
     vec31 = [-2, 2, -1],
     vec41 = [1, 2, -2, 4],
     vec42 = [2.1, -1.9, 7.5, 4.1],
+    vec42Copy = vec42.slice(),
     vecAlpha = ['a'];
 
 test('tests norm.js (n-dimensional vector normalization)', function (t) {
@@ -29,5 +30,6 @@ test('tests norm.js (n-dimensional vector normalization)', function (t) {
     t.equal(mag(norm(vec31)), 1, '3 dimensional vector');
     t.equal(mag(norm(vec41)), 1, '4 dimensional vector');
     t.equal(Number((mag(norm(vec42))).toFixed(10)), 1, '4 dimensional vector floats');
+    t.deepEqual(vec42, vec42Copy, 'Purity confirmed with 4d vector');
     t.end();
 });

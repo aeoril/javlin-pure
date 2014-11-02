@@ -15,7 +15,9 @@ var test = require('tape'),
     vec31 = [1.2, -3.5, 2],
     vec32 = [-1.2, 3.5, -2],
     vec41 = [1, 1, 1, 1],
+    vec41Copy = vec41.slice(),
     vec42 = [2, 2, 2, 0],
+    vec42Copy = vec42.slice(),
     vecAlpha = ['a'];
 
 test('tests proj.js (n-dimensional vector projection)', function (t) {
@@ -33,5 +35,6 @@ test('tests proj.js (n-dimensional vector projection)', function (t) {
     t.deepEqual(proj(vec21, vec22), [3, 4], '2 dimensional vectors');
     t.deepEqual(proj(vec31, vec32), [1.2, -3.5, 2], '3 dimensional vectors');
     t.deepEqual(proj(vec41, vec42), [1, 1, 1, 0], '4 dimensional vectors');
+    t.deepEqual([vec41, vec42], [vec41Copy, vec42Copy], 'Purity confirmed with 4d vectors');
     t.end();
 });

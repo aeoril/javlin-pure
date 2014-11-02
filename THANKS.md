@@ -1,6 +1,6 @@
-### javlin thanks
+### javlinPure thanks
 
-#### The below resources helped make javlin possible.  Thanks!
+#### The below resources helped make javlinPure possible.  Thanks!
 
 * [Stack Overflow][so]
   * As always, I find much very useful help here and it is invaluable
