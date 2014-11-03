@@ -51,7 +51,7 @@
     "devDependencies": {
         "tape": "~3.0.0",
         "tap-spec": "~1.0.1",
-        "jscs": "~1.6.2",
+        "jscs": "~1.6.2"
     },
     "testling": {
         "files": "test/index.js",
