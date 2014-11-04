@@ -1,8 +1,8 @@
 {
     "name": "javlin-pure",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "author": "aeoril",
-    "description": "Just Another Javascript Vector Library",
+    "description": "Just Another Vector Library in Node - Pure",
     "license": "MIT",
     "main": "src/index.js",
     "scripts": {
