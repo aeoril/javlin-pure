@@ -9,6 +9,7 @@ var test = require('tape'),
     javlinPure = require('../src/index'),
     add = javlinPure.add,
     sub = javlinPure.sub,
+    mul = javlinPure.mul,
     scale = javlinPure.scale,
     dot = javlinPure.dot,
     mag = javlinPure.mag,
@@ -21,6 +22,7 @@ var test = require('tape'),
 test('tests index.js (combined javlin-pure exports)', function (t) {
     t.equal(typeof add === 'function', true, 'add is a function');
     t.equal(typeof sub === 'function', true, 'sub is a function');
+    t.equal(typeof mul === 'function', true, 'mul is a function');
     t.equal(typeof scale === 'function', true, 'scale is a function');
     t.equal(typeof dot === 'function', true, 'dot is a function');
     t.equal(typeof mag === 'function', true, 'mag is a function');

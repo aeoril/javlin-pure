@@ -8,6 +8,7 @@
 require('./testIndex');
 require('./testAdd');
 require('./testSub');
+require('./testMul');
 require('./testScale');
 require('./testDot');
 require('./testMag');

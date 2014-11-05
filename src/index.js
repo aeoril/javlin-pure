@@ -7,6 +7,7 @@
 
 var add = require('./add'),
     sub = require('./sub'),
+    mul = require('./mul'),
     scale = require('./scale'),
     dot = require('./dot'),
     mag = require('./mag'),
@@ -18,6 +19,7 @@ var add = require('./add'),
 
 module.exports.add = add;
 module.exports.sub = sub;
+module.exports.mul = mul;
 module.exports.scale = scale;
 module.exports.dot = dot;
 module.exports.mag = mag;

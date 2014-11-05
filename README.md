@@ -1,6 +1,7 @@
 # javlin-pure (pronounced "javelin pure")
 ## Just Another Vector Library In Node - Pure
-Pure, stateless, modular vector manipulation functions written in Javascript.  Designed for Node.js.
+Pure, stateless, modular vector manipulation functions written in Javascript.  Designed for Node.js. 2d, 3d and
+n-dimensional operations
 
 ## Key Attributes
 
@@ -34,6 +35,11 @@ var vec = add([1, 2], [3, 4]); // vec === [4, 6]
 Subtracts two n-dimensional vectors (subtracts vec2 from vec1), returning the result in a new vector
 
 var vec = sub([1, 2], [3, -4]); // vec === [-2, 6]
+
+### mul(vec1, vec2)
+Multiplies two n-dimensional vectors diagonally (multiplies vec2 by vec1), returning the result in a new vector
+
+var vec = mul([1, 2], [3, -4]); // vec === [3, -8]
 
 ### scale(vec, scalar)
 Scales an n-dimensional vector by scalar (just a number), returning the result in a new vector
