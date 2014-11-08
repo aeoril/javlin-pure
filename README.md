@@ -37,7 +37,7 @@ Subtracts two n-dimensional vectors (subtracts vec2 from vec1), returning the re
 var vec = sub([1, 2], [3, -4]); // vec === [-2, 6]
 
 ### mul(vec1, vec2)
-Multiplies two n-dimensional vectors diagonally (multiplies vec2 by vec1), returning the result in a new vector
+Multiplies two n-dimensional vectors diagonally, returning the result in a new vector
 
 var vec = mul([1, 2], [3, -4]); // vec === [3, -8]
 

@@ -6,7 +6,7 @@
 'use strict';
 
 function scale(vec, scalar) {
-    return vec.map(function (elem, index) {
+    return vec.map(function (elem) {
         return elem * scalar;
     });
 }

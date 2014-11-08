@@ -6,8 +6,10 @@
 
 'use strict';
 
+var scale = require('./scale');
+
 function fromPolar2d(mag, angle) {
-    return [Math.cos(angle) * mag, Math.sin(angle) * mag];
+    return scale([Math.cos(angle), Math.sin(angle)], mag);
 }
 
 module.exports = fromPolar2d;
