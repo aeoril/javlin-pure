@@ -1,4 +1,4 @@
-# javlin-pure (pronounced "javelin pure")
+# javlin-pure
 ## Just Another Vector Library In Node - Pure
 Pure, stateless, modular vector manipulation functions written in Javascript.  Designed for Node.js. 2d, 3d and
 n-dimensional operations
