@@ -24,26 +24,20 @@
   * Suggested I use atan2 for .angle()
   * Suggested I make .mul() and .fromPolar() and actually gave me code for .fromPolar()
 
-* Thanks to Danny Cook - HeladoDeBrownie on freenode
-  * Got some ideas from his vbang n-dimensional vector library
-  * Helpful review and constructive criticism
-  * Pointed out bugs
-  * Gave me my first JavaScript code complement - "... could be useful ... " - I was stoked!
-
 * Thanks to [Jordan Harband][ljharb] - ljharb on freenode
   * Too many helpful suggestions to list them all
   * Finally got me on node
   * Got me to write individual modules for individual functions in individual files
   * His code provided necessary understanding of node, node modules and tape test
-  
+
 * Thanks to [Gary Katsevman][gkatsev] - gkatsev on freenode
   * Ongoing great suggestions
   * Helped get me to use node
-  
+
 * Thanks to [James Halliday][substack] - substack on freenode
   * provided [tape][tape] npm package for unit testing
   * provided much useful advice
-  
+
 [so]: http://stackoverflow.com/
 [mdn]: https://developer.mozilla.org/en-US/
 [jetbrains]: http://www.jetbrains.com/
